@@ -6,7 +6,13 @@
 /*   By: acuevas <acuevas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:00:11 by acuevas           #+#    #+#             */
-/*   Updated: 2026/11/04 14:00:12 by acuevas          ###   ########.fr       */
+/*   Updated: 2026/11/04 22:15:40 by acuevas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
+int	ft_print_csp(char specifier, va_list args)
+{
+	
+}
