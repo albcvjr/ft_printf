@@ -6,7 +6,7 @@
 /*   By: acuevas <acuevas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 14:00:11 by acuevas           #+#    #+#             */
-/*   Updated: 2026/11/05 17:55:30 by acuevas          ###   ########.fr       */
+/*   Updated: 2026/11/06 20:18:10 by acuevas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 int	ft_print_csp(char specifier, va_list args)
 {
-	int	result;
+	int		result;
+	char	*str;
+	void	*ptr;
 
-	result = 0;
 	if (specifier == 'c')
 	{
-		va_arg(args, int);
-		result = ft_print_char_len();
-		return (result);
+		result = va_arg(args, int);
+		return (ft_print_char_len(result));
 	}
 	else if (specifier == 's')
 	{
-		return ();
+		str = va_arg(args, char *);
+		return (ft_print_str(str));
 	}
 	else if (specifier == 'p')
 	{
-		return ();
+		ptr = va_arg(args, void *);
+		return (ft_print_mem(ptr));
 	}
+	return (-1);
 }
