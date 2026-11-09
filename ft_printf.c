@@ -6,7 +6,7 @@
 /*   By: acuevas <acuevas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 17:52:28 by acuevas           #+#    #+#             */
-/*   Updated: 2026/11/04 21:45:09 by acuevas          ###   ########.fr       */
+/*   Updated: 2026/11/09 05:09:11 by acuevas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int	ft_check_format(const char *format, va_list args)
 		else
 		{
 			i++;
+			if (format[i] == '\0')
+				return (-1);
 			temp = ft_print_format(format[i], args);
 		}
 		if (temp == -1)
