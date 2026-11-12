@@ -93,7 +93,7 @@ El Makefile también incluye las siguientes reglas:
 Para utilizar `ft_printf()` en otro proyecto, incluye el archivo de cabecera:
 
 ```c
-#include "libftprintf.h"
+#include "ft_printf.h"
 ```
 
 Compila tu programa enlazando la biblioteca:
