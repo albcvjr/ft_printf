@@ -6,7 +6,7 @@
 /*   By: acuevas <acuevas@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 14:24:32 by acuevas           #+#    #+#             */
-/*   Updated: 2026/11/12 16:24:48 by acuevas          ###   ########.fr       */
+/*   Updated: 2026/11/12 17:19:56 by acuevas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,8 @@ static void	test_percent(void)
 
 int	main(void)
 {
+	int	ret;
+
 	test_partial_write_error();
 	test_write_error();
 	test_csp();
@@ -135,6 +137,16 @@ int	main(void)
 	test_edges();
 	test_percent();
 	printf("\n===== FORMATO NULL =====\n");
-	printf("Nuestro retorno: %d\n", ft_printf(NULL));
+	printf("Nuestro retorno: %d\n\n\n", ft_printf(NULL));
+	printf("===== PRINTF ORIGINAL =====\n");
+	ret = printf("Hola %k mundo\n");
+	printf("Retorno: %d\n", ret);
+	printf("\n===== FT_PRINTF =====\n");
+	ret = ft_printf("Hola %k mundo\n");
+	printf("Retorno: %d\n\n\n", ret);
+	ret = printf("Hola %");
+	printf("\nRetorno: %d\n", ret);
+	ret = ft_printf("Hola %");
+	printf("\nRetorno: %d\n", ret);
 	return (0);
 }
